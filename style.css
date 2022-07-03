@@ -1,0 +1,26 @@
+body {
+margin: 0;
+background-color: var(--mdc-theme-primary, #6200ee);
+}
+
+header span {
+  font-family: 'Source Sans Pro';
+  font-weight:bolder;
+}
+.mdc-list-item {
+  font-family: 'Source Sans Pro';
+  height: 40px;
+  align-items: center;
+  border: 1px;
+}
+:root {
+  --mdc-typography-headline6-font-family: 'Source Sans Pro';
+}
+
+.mdc-list {
+    padding: 0;
+}
+
+#categoriesList li {
+    color: #fff;
+}
