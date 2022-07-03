@@ -37,7 +37,8 @@ class App {
     mdc_list_item.appendChild(mdc_span_ripple);
     mdc_list_item.appendChild(mcd_span_text);
 
-    mdc_list_item.addEventListener("click", this.categoryOnClick);
+    mdc_list_item.addEventListener("click", (e) => {this.categoryOnClick(e)
+    });
 
     this.list.appendChild(mdc_list_item);
   }
@@ -50,7 +51,6 @@ class App {
       clicked = e.target.closest("li");
     }
     let clickedCategory = clicked.innerText;
-
     this.currentCategory = clickedCategory.toLowerCase(); //change global currentCategory, showJoke uses this.currentCategory;
     this.showJoke();
   }
@@ -72,7 +72,7 @@ class App {
   }
   colorizeCategories() {
     let a = [...this.list.querySelectorAll("li")];
-    const itemsCount = A.length;
+    const itemsCount = a.length;
 
     a.forEach((element, index) => {
       element.style.backgroundColor = `rgb(
